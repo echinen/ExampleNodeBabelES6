@@ -43,7 +43,7 @@ describe('Routes Books', () => {
     });
 
     describe('3) Route POST /books', () => {
-        it('Should create a book', done => {
+        it('Should create a books', done => {
             const newBooks = {
                 id: 2,
                 name: 'newBook'
@@ -72,8 +72,7 @@ describe('Routes Books', () => {
                 .put('/books/1')
                 .send(updatedBook)
                 .end((err, res) => {
-                    expect(res.body).to.be.eql(updatedBook.id.eql([1]));
-                    expect(res.body.name).to.be.eql(updatedBook.name);
+                    expect(res.body).to.be.eql([1]);
 
                     done(err);
                 });
@@ -81,7 +80,7 @@ describe('Routes Books', () => {
     });
 
     describe('5) Route DELETE /book{id}', () => {
-        it('Should create a book', done => {
+        it('Should delete a book', done => {
             request
                 .delete('/books/1')
                 .end((err, res) => {
