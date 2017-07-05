@@ -4,7 +4,6 @@
 
 - babel
 
-
 ### Test
 
 - mocha
@@ -15,3 +14,12 @@
 
 - sqlite
 - sequelize
+
+### Eslint
+
+- eslint
+- eslint-config-airbnb
+
+### Package manager/dependency
+
+- yarn
